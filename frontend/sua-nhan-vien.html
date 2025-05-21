@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa Thông tin Nhân viên - Hệ thống Quản lý Nhân viên</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Quản lý Nhân viên</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="them-nhan-vien.html">Thêm nhân viên</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Sửa thông tin nhân viên</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="editNhanVienForm">
+                            <input type="hidden" id="nhanVienId">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="hoTen" class="form-label">Họ tên <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="hoTen" name="ho_ten" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="soDienThoai" class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control" id="soDienThoai" name="so_dien_thoai">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="chucVu" class="form-label">Chức vụ</label>
+                                    <select class="form-select" id="chucVu" name="chuc_vu">
+                                        <option value="Nhân viên">Nhân viên</option>
+                                        <option value="Trưởng nhóm">Trưởng nhóm</option>
+                                        <option value="Trưởng phòng">Trưởng phòng</option>
+                                        <option value="Giám đốc">Giám đốc</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="phongBan" class="form-label">Phòng ban</label>
+                                    <select class="form-select" id="phongBan" name="phong_ban">
+                                        <option value="Kỹ thuật">Kỹ thuật</option>
+                                        <option value="Nhân sự">Nhân sự</option>
+                                        <option value="Điều hành">Điều hành</option>
+                                        <option value="Kinh doanh">Kinh doanh</option>
+                                        <option value="Marketing">Marketing</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="luong" class="form-label">Lương (VNĐ)</label>
+                                    <input type="number" class="form-control" id="luong" name="luong" min="0">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ngayVaoLam" class="form-label">Ngày vào làm</label>
+                                <input type="date" class="form-control" id="ngayVaoLam" name="ngay_vao_lam">
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a href="index.html" class="btn btn-secondary me-md-2">Hủy</a>
+                                <button type="submit" class="btn btn-primary">Cập nhật</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-muted py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2023 Hệ thống Quản lý Nhân viên</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sua-nhan-vien.js"></script>
+</body>
+</html>
