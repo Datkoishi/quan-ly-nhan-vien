@@ -36,51 +36,60 @@
                         <h4 class="mb-0">Thêm nhân viên mới</h4>
                     </div>
                     <div class="card-body">
-                        <form id="nhanVienForm">
+                        <form id="nhanVienForm" novalidate>
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="hoTen" class="form-label">Họ tên <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="hoTen" name="ho_ten" required>
+                                    <div class="invalid-feedback">Vui lòng nhập họ tên.</div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
                                     <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="soDienThoai" class="form-label">Số điện thoại</label>
                                     <input type="tel" class="form-control" id="soDienThoai" name="so_dien_thoai">
+                                    <div class="invalid-feedback">Vui lòng nhập số điện thoại hợp lệ (VD: 0901234567).</div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="chucVu" class="form-label">Chức vụ</label>
                                     <select class="form-select" id="chucVu" name="chuc_vu">
+                                        <option value="">-- Chọn chức vụ --</option>
                                         <option value="Nhân viên">Nhân viên</option>
                                         <option value="Trưởng nhóm">Trưởng nhóm</option>
                                         <option value="Trưởng phòng">Trưởng phòng</option>
                                         <option value="Giám đốc">Giám đốc</option>
                                     </select>
+                                    <div class="invalid-feedback">Vui lòng chọn chức vụ.</div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="phongBan" class="form-label">Phòng ban</label>
-                                    <select class="form-select" id="phongBan" name="phong_ban">
+                                    <label for="phongBan" class="form-label">Phòng ban <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="phongBan" name="phong_ban" required>
+                                        <option value="">-- Chọn phòng ban --</option>
                                         <option value="Kỹ thuật">Kỹ thuật</option>
                                         <option value="Nhân sự">Nhân sự</option>
                                         <option value="Điều hành">Điều hành</option>
                                         <option value="Kinh doanh">Kinh doanh</option>
                                         <option value="Marketing">Marketing</option>
                                     </select>
+                                    <div class="invalid-feedback">Vui lòng chọn phòng ban.</div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="luong" class="form-label">Lương (VNĐ)</label>
-                                    <input type="number" class="form-control" id="luong" name="luong" min="0">
+                                    <label for="luong" class="form-label">Lương (VNĐ) <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="luong" name="luong" min="0" required>
+                                    <div class="invalid-feedback">Vui lòng nhập lương hợp lệ (số dương).</div>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="ngayVaoLam" class="form-label">Ngày vào làm</label>
-                                <input type="date" class="form-control" id="ngayVaoLam" name="ngay_vao_lam">
+                                <label for="ngayVaoLam" class="form-label">Ngày vào làm <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="ngayVaoLam" name="ngay_vao_lam" required>
+                                <div class="invalid-feedback">Vui lòng chọn ngày vào làm.</div>
                             </div>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <a href="index.html" class="btn btn-secondary me-md-2">Hủy</a>
@@ -95,7 +104,7 @@
 
     <footer class="bg-light text-center text-muted py-3 mt-5">
         <div class="container">
-            <p class="mb-0">© Designed & Developed by truongdat</p>
+            <p class="mb-0">© 2023 Hệ thống Quản lý Nhân viên</p>
         </div>
     </footer>
 
